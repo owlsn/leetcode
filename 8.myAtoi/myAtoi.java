@@ -6,7 +6,7 @@
 // 在任何情况下，若函数不能进行有效的转换时，请返回 0。
 
 // 说明：
-// 假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−231,  231 − 1]。如果数值超过这个范围，qing返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 。
+// 假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−2^31,  2^31 − 1]。如果数值超过这个范围，qing返回  INT_MAX (2^31 − 1) 或 INT_MIN (−2^31) 。
 
 // 示例 1:
 // 输入: "42"
@@ -33,18 +33,63 @@
 // 输入: "-91283472332"
 // 输出: -2147483648
 // 解释: 数字 "-91283472332" 超过 32 位有符号整数范围。 
-//      因此返回 INT_MIN (−231) 。
+//      因此返回 INT_MIN (−2^31) 。
 
+//遍历字符串，按情况分类
+//start=1表示尚未遇到第一个不为空的字符，遇到后start置0
+//  第一个不为空的字符分几种情况：1.数字，2.正负号，3.非数字
+//然后正常处理，遇到不为数字的字符就break；
+//判断是否溢出的条件正溢出（sym > 0 && (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && bit > 7))）
+//               负溢出（sym < 0 && (sym * result < Integer.MIN_VALUE / 10 || (sym * result == Integer.MIN_VALUE / 10 && sym * bit < -8))）
 
 public class myAtoi {
 
     public static void main(String[] args){
         myAtoi test = new myAtoi();
-        String s = "asdfasfd";
+        String s = "-2147483648";
         System.out.println(test.myAtoi(s));
     }
 
     public int myAtoi(String str) {
-        
+        int result = 0, start = 1, sym = 1, bit = 0;
+        char c = ' ';
+        //Integer.MAX_VALUE,Integer.MIN_VALUE;
+        for(int i = 0; i < str.length(); i ++){
+            c = str.charAt(i);
+            bit = c - '0';
+            if(start == 1){
+                if(c == ' '){
+                    continue;
+                }
+                //不是空格开头
+                start = 0;
+                //不是数字
+                if(c != '-' && c != '+' && (c - '0' < 0 || c - '0' > 9)){
+                    return 0;
+                }
+                if(c == '-'){
+                    sym = -1;
+                    continue;
+                }
+                if(c == '+'){
+                    continue;
+                }
+                result = result * 10 + bit;
+            }
+            else{
+                //不是数字
+                if(bit < 0 || bit > 9){
+                    break;
+                }
+                if(sym > 0 && (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && bit > 7))){
+                    return Integer.MAX_VALUE;
+                }
+                if(sym < 0 && (sym * result < Integer.MIN_VALUE / 10 || (sym * result == Integer.MIN_VALUE / 10 && sym * bit < -8))){
+                    return Integer.MIN_VALUE;
+                }
+                result = result * 10 + bit;
+            }
+        }
+        return result * sym;
     }
 }
