@@ -13,7 +13,7 @@
 //s(ij)表示ij围成的面积，s(ij) = (j - i) * min(height[i], height[j])
 //当heigth[i] < height[j]时,
 //如果j--,s(i(j-1))=(j-1-i)*min(height[i],height[j-1])<=(j-1-i)*height[i]
-//s(ij)=(j-i)*heigth[i]=(j-i-1)*heigth[i]+heigth[i]>=s(i(j-1))
+//s(ij)=(j-i)*heigth[i]=(j-i-1)*heigth[i]+heigth[i]>=(j-1-i)*height[i]>=s(i(j-1))
 //所以对于j--这一分支,面积是肯定小于s(ij)的，那么就只用考虑i++这一分支
 //同理,当heigth[i] > height[j]时，就只用考虑j--这一分支
 
