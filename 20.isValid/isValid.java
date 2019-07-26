@@ -24,7 +24,6 @@
 // 输入: "{[]}"
 // 输出: true
 
-//
 import java.util.Stack;
 
 public class isValid {
