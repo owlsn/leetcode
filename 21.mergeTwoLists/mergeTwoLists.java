@@ -38,33 +38,27 @@ public class mergeTwoLists {
         ListNode list = new ListNode(0);
         ListNode head = list;
         int temp = 0;
-        while(l1 != null || l2 != null){
-            if(l1 == null){
-                while(l2 != null){
-                    head.next = new ListNode(l2.val);
-                    head = head.next;
-                    l2 = l2.next;
-                }
-            }
-            else if(l2 == null){
-                while(l1 != null){
-                    head.next = new ListNode(l1.val);
-                    head = head.next;
-                    l1 = l1.next;
-                }
+        while(l1 != null && l2 != null){
+            if(l1.val > l2.val){
+                temp = l2.val;
+                l2 = l2.next;
             }
             else{
-                if(l1.val > l2.val){
-                    temp = l2.val;
-                    l2 = l2.next;
-                }
-                else{
-                    temp = l1.val;
-                    l1 = l1.next;
-                }
-                head.next = new ListNode(temp);
-                head = head.next;
+                temp = l1.val;
+                l1 = l1.next;
             }
+            head.next = new ListNode(temp);
+            head = head.next;
+        }
+        while(l1 != null){
+            head.next = new ListNode(l1.val);
+            head = head.next;
+            l1 = l1.next;
+        }
+        while(l2 != null){
+            head.next = new ListNode(l2.val);
+            head = head.next;
+            l2 = l2.next;
         }
         return list.next;
     }
