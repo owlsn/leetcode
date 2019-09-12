@@ -17,8 +17,6 @@
 //num = (row / 3) * 3 + column / 3表示第num个9ge
 //table[num][digit]代表第num个9格的digit数字已经有了
 
-import java.util.HashMap;
-
 public class isValidSudoku {
 
     public static void main(String[] args) {
