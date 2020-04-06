@@ -7,13 +7,28 @@
 // 因为 nums[0] + nums[1] = 2 + 7 = 9
 // 所以返回 [0, 1]
 
-//
+// 使用map记录每个值对应的下标索引
 #include "twoSum.h"
+// #include <iostream>
+#include <map>
 
 Solution::Solution() {}
 
 Solution::~Solution() {}
 
 std::vector<int> Solution::twoSum(std::vector<int> &nums, int target) {
-  return nums;
+  std::map<int, int> index;
+  std::vector<int> res;
+  for (int i = 0; i < nums.size(); i++) {
+    if (index.find(target - nums[i]) == index.end()) {
+      // std::cout << nums[i] << ":" << i << std::endl;
+      index.insert(std::pair<int, int>(nums[i], i));
+    } else {
+      // std::cout << "push_back" << index[nums[i]] << ":" << i << std::endl;
+      res.push_back(index[target - nums[i]]);
+      res.push_back(i);
+      break;
+    }
+  }
+  return res;
 }
