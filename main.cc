@@ -1,13 +1,15 @@
 // gcc -Wall -std=c++11 -lstdc++ main.cc ./1.twoSum/twoSum.cc -o main
 #include <iostream>
-// #include <vector>
+#include <vector>
 
 // #include "1.twoSum/twoSum.h"
 // #include "2.addTwoNumbers/addTwoNumbers.h"
-#include "3.lengthOfLongestSubstring/lengthOfLongestSubstring.h"
+// #include "3.lengthOfLongestSubstring/lengthOfLongestSubstring.h"
+#include "4.findMedianSortedArrays/findMedianSortedArrays.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
+
   // 1.twoSum
   // std::vector<int> nums = {3, 2, 3};
   // int target = 6;
@@ -32,9 +34,15 @@ int main(int argc, char* argv[]) {
   // std::cout << "NULL" << std::endl;
 
   // 3.lengthOfLongestSubstring
-  std::string s = "pwwkew";
-  int res = solution->lengthOfLongestSubstring(s);
-  std::cout << res << std::endl;
+  // std::string s = "pwwkew";
+  // int res = solution->lengthOfLongestSubstring(s);
+  // std::cout << res << std::endl;
+
+  // 4.findMedianSortedArrays
+  std::vector<int> nums1 = {};
+  std::vector<int> nums2 = {1};
+  double res = solution->findMedianSortedArrays(nums1, nums2);
+  std::cout<< res << std::endl;
   
   return 0;
 }
