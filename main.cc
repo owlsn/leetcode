@@ -1,11 +1,11 @@
 // gcc -Wall -std=c++11 -lstdc++ main.cc ./1.twoSum/twoSum.cc -o main
 #include <iostream>
-#include <vector>
 
 // #include "1.twoSum/twoSum.h"
 // #include "2.addTwoNumbers/addTwoNumbers.h"
 // #include "3.lengthOfLongestSubstring/lengthOfLongestSubstring.h"
-#include "4.findMedianSortedArrays/findMedianSortedArrays.h"
+// #include "4.findMedianSortedArrays/findMedianSortedArrays.h"
+#include "5.longestPalindrome/longestPalindrome.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -39,10 +39,15 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 4.findMedianSortedArrays
-  std::vector<int> nums1 = {};
-  std::vector<int> nums2 = {1};
-  double res = solution->findMedianSortedArrays(nums1, nums2);
-  std::cout<< res << std::endl;
+  // std::vector<int> nums1 = {};
+  // std::vector<int> nums2 = {1};
+  // double res = solution->findMedianSortedArrays(nums1, nums2);
+  // std::cout<< res << std::endl;
+
+  // 5.longestPalindrome
+  std::string s = "babad";
+  std::string res = solution->longestPalindrome(s);
+  std::cout << res << std::endl;
   
   return 0;
 }
