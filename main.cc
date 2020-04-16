@@ -6,7 +6,8 @@
 // #include "3.lengthOfLongestSubstring/lengthOfLongestSubstring.h"
 // #include "4.findMedianSortedArrays/findMedianSortedArrays.h"
 // #include "5.longestPalindrome/longestPalindrome.h"
-#include "6.zconvert/zconvert.h"
+// #include "6.zconvert/zconvert.h"
+#include "7.intreverse/intreverse.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -51,9 +52,14 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 6.zconvert
-  std::string str = "LEETCODEISHIRING";
-  int numRows = 4;
-  std::string res = solution->convert(str, numRows);
+  // std::string str = "LEETCODEISHIRING";
+  // int numRows = 4;
+  // std::string res = solution->convert(str, numRows);
+  // std::cout << res << std::endl;
+
+  // 7.intreverse
+  int num = 1534236469;
+  int res = solution->reverse(num);
   std::cout << res << std::endl;
   
   return 0;
