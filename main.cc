@@ -7,7 +7,8 @@
 // #include "4.findMedianSortedArrays/findMedianSortedArrays.h"
 // #include "5.longestPalindrome/longestPalindrome.h"
 // #include "6.zconvert/zconvert.h"
-#include "7.intreverse/intreverse.h"
+// #include "7.intreverse/intreverse.h"
+#include "8.myAtoi/myAtoi.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -58,8 +59,13 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 7.intreverse
-  int num = 1534236469;
-  int res = solution->reverse(num);
+  // int num = 1534236469;
+  // int res = solution->reverse(num);
+  // std::cout << res << std::endl;
+
+  // 8.myAtoi
+  std::string str = "-2147483648";
+  int res = solution->myAtoi(str);
   std::cout << res << std::endl;
   
   return 0;
