@@ -9,7 +9,8 @@
 // #include "6.zconvert/zconvert.h"
 // #include "7.intreverse/intreverse.h"
 // #include "8.myAtoi/myAtoi.h"
-#include "9.isPalindrome/isPalindrome.h"
+// #include "9.isPalindrome/isPalindrome.h"
+#include "10.isMatch/isMatch.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -70,8 +71,14 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 9.isPalindrome
-  int x = 2147483647;
-  bool res = solution->isPalindrome(x);
+  // int x = 2147483647;
+  // bool res = solution->isPalindrome(x);
+  // std::cout << res << std::endl;
+
+  // 10.isMatch
+  std::string s = "aa";
+  std::string p = "a*";
+  bool res = solution->isMatch(s, p);
   std::cout << res << std::endl;
   
   return 0;
