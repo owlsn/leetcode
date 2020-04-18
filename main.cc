@@ -10,7 +10,8 @@
 // #include "7.intreverse/intreverse.h"
 // #include "8.myAtoi/myAtoi.h"
 // #include "9.isPalindrome/isPalindrome.h"
-#include "10.isMatch/isMatch.h"
+// #include "10.isMatch/isMatch.h"
+#include "11.maxArea/maxArea.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -76,9 +77,14 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 10.isMatch
-  std::string s = "aa";
-  std::string p = "a*";
-  bool res = solution->isMatch(s, p);
+  // std::string s = "aa";
+  // std::string p = "a*";
+  // bool res = solution->isMatch(s, p);
+  // std::cout << res << std::endl;
+
+  // 11.maxArea
+  std::vector<int> height{1,8,6,2,5,4,8,3,7};
+  int res = solution->maxArea(height);
   std::cout << res << std::endl;
   
   return 0;
