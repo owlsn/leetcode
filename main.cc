@@ -11,7 +11,9 @@
 // #include "8.myAtoi/myAtoi.h"
 // #include "9.isPalindrome/isPalindrome.h"
 // #include "10.isMatch/isMatch.h"
-#include "11.maxArea/maxArea.h"
+// #include "11.maxArea/maxArea.h"
+// #include "12.intToRoman/intToRoman.h"
+#include "13.romanToInt/romanToInt.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -83,9 +85,18 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 11.maxArea
-  std::vector<int> height{1,8,6,2,5,4,8,3,7};
-  int res = solution->maxArea(height);
-  std::cout << res << std::endl;
+  // std::vector<int> height{1,8,6,2,5,4,8,3,7};
+  // int res = solution->maxArea(height);
+  // std::cout << res << std::endl;
   
+  // 12.intToRoman
+  // int num = 1234;
+  // std::string res = solution->intToRoman(num);
+  // std::cout << res << std::endl;
+
+  std::string str = "MCCXXXIV";
+  int res = solution->romanToInt(str);
+  std::cout << res << std::endl;
+
   return 0;
 }
