@@ -13,12 +13,14 @@
 // #include "10.isMatch/isMatch.h"
 // #include "11.maxArea/maxArea.h"
 // #include "12.intToRoman/intToRoman.h"
-#include "13.romanToInt/romanToInt.h"
+// #include "13.romanToInt/romanToInt.h"
+// #include "14.longestCommonPrefix/longestCommonPrefix.h"
+#include "15.threeSum/threeSum.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
 
-  // 1.twoSum
+  // 1.twoSums
   // std::vector<int> nums = {3, 2, 3};
   // int target = 6;
   // std::vector<int> res;
@@ -94,9 +96,26 @@ int main(int argc, char* argv[]) {
   // std::string res = solution->intToRoman(num);
   // std::cout << res << std::endl;
 
-  std::string str = "MCCXXXIV";
-  int res = solution->romanToInt(str);
-  std::cout << res << std::endl;
+  // 13.romanToInt
+  // std::string str = "MCCXXXIV";
+  // int res = solution->romanToInt(str);
+  // std::cout << res << std::endl;
+
+  // 14.longestCommonPrefix
+  // std::vesctor<std::string> strs{"flower","flow","flight"};
+  // std::string res = solution->longestCommonPrefix(strs);
+  // std::cout << res << std::endl;
+
+  // 15.threeSum
+  // std::vector<int> nums{-1, 0, 1, 2, -1, -4};
+  std::vector<int> nums{0, 0, 0};
+  auto res = solution->threeSum(nums);
+  for(int i = 0; i < res.size(); i ++){
+    for(int j = 0; j < res[i].size(); j ++){
+      std::cout << res[i][j] << " ";
+    }
+    std::cout << std::endl;
+  }
 
   return 0;
 }
