@@ -15,7 +15,9 @@
 // #include "12.intToRoman/intToRoman.h"
 // #include "13.romanToInt/romanToInt.h"
 // #include "14.longestCommonPrefix/longestCommonPrefix.h"
-#include "15.threeSum/threeSum.h"
+// #include "15.threeSum/threeSum.h"
+// #include "16.threeSumClosest/threeSumClosest.h"
+#include "17.letterCombinations/letterCombinations.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -108,14 +110,26 @@ int main(int argc, char* argv[]) {
 
   // 15.threeSum
   // std::vector<int> nums{-1, 0, 1, 2, -1, -4};
-  std::vector<int> nums{0, 0, 0};
-  auto res = solution->threeSum(nums);
-  for(int i = 0; i < res.size(); i ++){
-    for(int j = 0; j < res[i].size(); j ++){
-      std::cout << res[i][j] << " ";
-    }
-    std::cout << std::endl;
-  }
+  // std::vector<int> nums{0, 0, 0};
+  // auto res = solution->threeSum(nums);
+  // for(int i = 0; i < res.size(); i ++){
+  //   for(int j = 0; j < res[i].size(); j ++){
+  //     std::cout << res[i][j] << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+  
+  // 16.threeSumClosest
+  // std::vector<int> nums{-1,2,1,-4};
+  // int target = 1;
+  // auto res = solution->threeSumClosest(nums, target);
+  // std::cout << res << std::endl;
 
+  // 17.letterCombinations
+  std::string digits = "23";
+  std::vector<std::string> res = solution->letterCombinations(digits);
+  for(auto value : res){
+    std::cout << value << " ";
+  }
   return 0;
 }
