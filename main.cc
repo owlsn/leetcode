@@ -17,7 +17,8 @@
 // #include "14.longestCommonPrefix/longestCommonPrefix.h"
 // #include "15.threeSum/threeSum.h"
 // #include "16.threeSumClosest/threeSumClosest.h"
-#include "17.letterCombinations/letterCombinations.h"
+// #include "17.letterCombinations/letterCombinations.h"
+#include "18.fourSum/fourSum.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -126,10 +127,22 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 17.letterCombinations
-  std::string digits = "23";
-  std::vector<std::string> res = solution->letterCombinations(digits);
-  for(auto value : res){
-    std::cout << value << " ";
+  // std::string digits = "23";
+  // std::vector<std::string> res = solution->letterCombinations(digits);
+  // for(auto value : res){
+  //   std::cout << value << " ";
+  // }
+
+  // 18.fourSum
+  std::vector<int> nums{1,-2,-5,-4,-3,3,3,5};
+  int target = -11;
+  auto res = solution->fourSum(nums, target);
+  for(int i = 0; i < res.size(); i ++){
+    for(int j = 0; j < res[i].size(); j ++){
+      std::cout << res[i][j] << " ";
+    }
+    std::cout << std::endl;
   }
+
   return 0;
 }
