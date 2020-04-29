@@ -18,7 +18,8 @@
 // #include "15.threeSum/threeSum.h"
 // #include "16.threeSumClosest/threeSumClosest.h"
 // #include "17.letterCombinations/letterCombinations.h"
-#include "18.fourSum/fourSum.h"
+// #include "18.fourSum/fourSum.h"
+#include "19.removeNthFromEnd/removeNthFromEnd.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -134,14 +135,25 @@ int main(int argc, char* argv[]) {
   // }
 
   // 18.fourSum
-  std::vector<int> nums{1,-2,-5,-4,-3,3,3,5};
-  int target = -11;
-  auto res = solution->fourSum(nums, target);
-  for(int i = 0; i < res.size(); i ++){
-    for(int j = 0; j < res[i].size(); j ++){
-      std::cout << res[i][j] << " ";
-    }
-    std::cout << std::endl;
+  // std::vector<int> nums{1,-2,-5,-4,-3,3,3,5};
+  // int target = -11;
+  // auto res = solution->fourSum(nums, target);
+  // for(int i = 0; i < res.size(); i ++){
+  //   for(int j = 0; j < res[i].size(); j ++){
+  //     std::cout << res[i][j] << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 19.removeNthFromEnd
+  ListNode* head = new ListNode(1);
+  head->next = new ListNode(2);
+  head->next->next = new ListNode(3);
+  ListNode* ret = solution->removeNthFromEnd(head, 1);
+  while (ret)
+  {
+    std::cout << ret->val << " ";
+    ret = ret->next;
   }
 
   return 0;
