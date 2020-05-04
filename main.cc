@@ -19,7 +19,8 @@
 // #include "16.threeSumClosest/threeSumClosest.h"
 // #include "17.letterCombinations/letterCombinations.h"
 // #include "18.fourSum/fourSum.h"
-#include "19.removeNthFromEnd/removeNthFromEnd.h"
+// #include "19.removeNthFromEnd/removeNthFromEnd.h"
+#include "20.isValid/isValid.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -146,15 +147,20 @@ int main(int argc, char* argv[]) {
   // }
 
   // 19.removeNthFromEnd
-  ListNode* head = new ListNode(1);
-  head->next = new ListNode(2);
-  head->next->next = new ListNode(3);
-  ListNode* ret = solution->removeNthFromEnd(head, 1);
-  while (ret)
-  {
-    std::cout << ret->val << " ";
-    ret = ret->next;
-  }
+  // ListNode* head = new ListNode(1);
+  // head->next = new ListNode(2);
+  // head->next->next = new ListNode(3);
+  // ListNode* ret = solution->removeNthFromEnd(head, 1);
+  // while (ret)
+  // {
+  //   std::cout << ret->val << " ";
+  //   ret = ret->next;
+  // }
+
+  // 20.isValid
+  std::string str = "()[]{}";
+  bool res = solution->isValid(str);
+  std::cout << res << std::endl;
 
   return 0;
 }
