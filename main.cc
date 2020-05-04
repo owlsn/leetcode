@@ -20,7 +20,13 @@
 // #include "17.letterCombinations/letterCombinations.h"
 // #include "18.fourSum/fourSum.h"
 // #include "19.removeNthFromEnd/removeNthFromEnd.h"
-#include "20.isValid/isValid.h"
+// #include "20.isValid/isValid.h"
+// #include "21.mergeTwoLists/mergeTwoLists.h"
+// #include "22.generateParenthesis/generateParenthesis.h"
+// #include "23.mergeKLists/mergeKLists.h"
+// #include "24.swapPairs/swapPairs.h"
+#include "25.reverseKGroup/reverseKGroup.h"
+// #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
   auto solution = new Solution();
@@ -158,9 +164,87 @@ int main(int argc, char* argv[]) {
   // }
 
   // 20.isValid
-  std::string str = "()[]{}";
-  bool res = solution->isValid(str);
-  std::cout << res << std::endl;
+  // std::string str = "()[]{}";
+  // bool res = solution->isValid(str);
+  // std::cout << res << std::endl;
+
+  // 21.mergeTwoLists
+  // ListNode* l1 = new ListNode(2);
+  // l1->next = new ListNode(3);
+  // l1->next->next = new ListNode(4);
+  // ListNode* l2 = new ListNode(2);
+  // l2->next = new ListNode(5);
+  // l2->next->next = new ListNode(6);
+  // ListNode* res = solution->mergeTwoLists(l1, l2);
+  // while(res){
+  //   std::cout << res->val << " ";
+  //   res = res->next;
+  // }
+
+  // 22.generateParenthesis
+  // int num = 3;
+  // auto res = solution->generateParenthesis(num);
+  // for(auto str : res){
+  //   std::cout << str << std::endl;
+  // }
+
+  // 23.mergeKLists
+  // ListNode* l1 = new ListNode(2);
+  // l1->next = new ListNode(3);
+  // l1->next->next = new ListNode(4);
+  // ListNode* l2 = new ListNode(2);
+  // l2->next = new ListNode(5);
+  // l2->next->next = new ListNode(6);
+  // ListNode* l3 = new ListNode(2);
+  // l3->next = new ListNode(3);
+  // l3->next->next = new ListNode(4);
+  // std::vector<ListNode* > lists;
+  // lists.push_back(l1);
+  // lists.push_back(l2);
+  // lists.push_back(l3);
+  // ListNode* res = solution->mergeKLists(lists);
+  // while(res){
+  //   std::cout << res->val << " ";
+  //   res = res->next;
+  // }
+
+  // 24.swapPairs
+  // ListNode* l1 = new ListNode(2);
+  // l1->next = new ListNode(3);
+  // l1->next->next = new ListNode(4);
+  // auto res = solution->swapPairs(l1);
+  // while(res){
+  //   std::cout << res->val << " ";
+  //   res = res->next;
+  // }
+
+  // 25.reverseKGroup
+  ListNode* l1 = new ListNode(1);
+  ListNode* head = l1;
+  l1->next = new ListNode(2);
+  l1 = l1->next;
+  l1->next = new ListNode(3);
+  l1 = l1->next;
+  l1->next = new ListNode(4);
+  l1 = l1->next;
+  l1->next = new ListNode(5);
+  l1 = l1->next;
+  int k = 2;
+  auto res = solution->reverseKGroup(head, k);
+  while(res){
+    std::cout << res->val << " ";
+    res = res->next;
+  }
+
+  // 206.reverseList
+  // ListNode* l1 = new ListNode(2);
+  // l1->next = new ListNode(3);
+  // l1->next->next = new ListNode(4);
+  // auto res = solution->reverseList(l1);
+  // while(res){
+  //   std::cout << res->val << " ";
+  //   res = res->next;
+  // }
 
   return 0;
 }
