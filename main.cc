@@ -25,7 +25,10 @@
 // #include "22.generateParenthesis/generateParenthesis.h"
 // #include "23.mergeKLists/mergeKLists.h"
 // #include "24.swapPairs/swapPairs.h"
-#include "25.reverseKGroup/reverseKGroup.h"
+// #include "25.reverseKGroup/reverseKGroup.h"
+// #include "26.removeDuplicates/removeDuplicates.h"
+// #include "27.removeElement/removeElement.h"
+#include "28.strStr/strStr.h"
 // #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
@@ -219,22 +222,38 @@ int main(int argc, char* argv[]) {
   // }
 
   // 25.reverseKGroup
-  ListNode* l1 = new ListNode(1);
-  ListNode* head = l1;
-  l1->next = new ListNode(2);
-  l1 = l1->next;
-  l1->next = new ListNode(3);
-  l1 = l1->next;
-  l1->next = new ListNode(4);
-  l1 = l1->next;
-  l1->next = new ListNode(5);
-  l1 = l1->next;
-  int k = 2;
-  auto res = solution->reverseKGroup(head, k);
-  while(res){
-    std::cout << res->val << " ";
-    res = res->next;
-  }
+  // ListNode* l1 = new ListNode(1);
+  // ListNode* head = l1;
+  // l1->next = new ListNode(2);
+  // l1 = l1->next;
+  // l1->next = new ListNode(3);
+  // l1 = l1->next;
+  // l1->next = new ListNode(4);
+  // l1 = l1->next;
+  // l1->next = new ListNode(5);
+  // l1 = l1->next;
+  // int k = 2;
+  // auto res = solution->reverseKGroup(head, k);
+  // while(res){
+  //   std::cout << res->val << " ";
+  //   res = res->next;
+  // }
+
+  // 26.removeDuplicates
+  // std::vector<int> nums{1, 2, 2, 3, 4, 5};
+  // auto res = solution->removeDuplicates(nums);
+  // std::cout << res << std::endl;
+
+  // 27.removeElement
+  // std::vector<int> nums{1, 2, 2, 3, 4, 5};
+  // int k = 2;
+  // auto res = solution->removeElement(nums, k);
+  // std::cout << res << std::endl;
+
+  // 28.strStr
+  std::string haystack = "BBC ABCDAB ABCDABCDABDE", needle = "ABCDABD";
+  auto res = solution->strStr(haystack, needle);
+  std::cout << res << std::endl;
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
