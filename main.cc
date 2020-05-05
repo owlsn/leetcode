@@ -28,7 +28,8 @@
 // #include "25.reverseKGroup/reverseKGroup.h"
 // #include "26.removeDuplicates/removeDuplicates.h"
 // #include "27.removeElement/removeElement.h"
-#include "28.strStr/strStr.h"
+// #include "28.strStr/strStr.h"
+#include "29.divide/divide.h"
 // #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
@@ -251,8 +252,13 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 28.strStr
-  std::string haystack = "BBC ABCDAB ABCDABCDABDE", needle = "ABCDABD";
-  auto res = solution->strStr(haystack, needle);
+  // std::string haystack = "BBC ABCDAB ABCDABCDABDE", needle = "ABCDABD";
+  // auto res = solution->strStr(haystack, needle);
+  // std::cout << res << std::endl;
+
+  // 29.divide
+  int dividend = 10, divisor = -3;
+  auto res = solution->divide(dividend, divisor);
   std::cout << res << std::endl;
 
   // 206.reverseList
