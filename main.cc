@@ -29,7 +29,8 @@
 // #include "26.removeDuplicates/removeDuplicates.h"
 // #include "27.removeElement/removeElement.h"
 // #include "28.strStr/strStr.h"
-#include "29.divide/divide.h"
+// #include "29.divide/divide.h"
+#include "30.findSubstring/findSubstring.h"
 // #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
@@ -257,9 +258,17 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 29.divide
-  int dividend = 10, divisor = -3;
-  auto res = solution->divide(dividend, divisor);
-  std::cout << res << std::endl;
+  // int dividend = 10, divisor = -3;
+  // auto res = solution->divide(dividend, divisor);
+  // std::cout << res << std::endl;
+
+  // 30.findSubstring
+  std::string s = "barfoofoobarthefoobarman";
+  std::vector<std::string> words{"bar","foo","the"};
+  auto res = solution->findSubstring(s, words);
+  for(auto value : res){
+    std::cout << value << " "; 
+  }
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
