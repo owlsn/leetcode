@@ -30,7 +30,8 @@
 // #include "27.removeElement/removeElement.h"
 // #include "28.strStr/strStr.h"
 // #include "29.divide/divide.h"
-#include "30.findSubstring/findSubstring.h"
+// #include "30.findSubstring/findSubstring.h"
+#include "31.nextPermutation/nextPermutation.h"
 // #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
@@ -263,11 +264,18 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 30.findSubstring
-  std::string s = "barfoofoobarthefoobarman";
-  std::vector<std::string> words{"bar","foo","the"};
-  auto res = solution->findSubstring(s, words);
-  for(auto value : res){
-    std::cout << value << " "; 
+  // std::string s = "barfoofoobarthefoobarman";
+  // std::vector<std::string> words{"bar","foo","the"};
+  // auto res = solution->findSubstring(s, words);
+  // for(auto value : res){
+  //   std::cout << value << " "; 
+  // }
+
+  // 31.nextPermutation
+  std::vector<int> nums{1,2};
+  solution->nextPermutation(nums);
+  for(int value : nums){
+    std::cout << value <<  " ";
   }
 
   // 206.reverseList
