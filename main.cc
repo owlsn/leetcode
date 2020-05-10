@@ -31,7 +31,9 @@
 // #include "28.strStr/strStr.h"
 // #include "29.divide/divide.h"
 // #include "30.findSubstring/findSubstring.h"
-#include "31.nextPermutation/nextPermutation.h"
+// #include "31.nextPermutation/nextPermutation.h"
+#include "32.longestValidParentheses/longestValidParentheses.h"
+
 // #include "206.reverseList/reverseList.h"
 
 int main(int argc, char* argv[]) {
@@ -272,11 +274,16 @@ int main(int argc, char* argv[]) {
   // }
 
   // 31.nextPermutation
-  std::vector<int> nums{1,2};
-  solution->nextPermutation(nums);
-  for(int value : nums){
-    std::cout << value <<  " ";
-  }
+  // std::vector<int> nums{1,2};
+  // solution->nextPermutation(nums);
+  // for(int value : nums){
+  //   std::cout << value <<  " ";
+  // }
+
+  // 32.longestValidParentheses
+  std::string str = "()()()()()(())";
+  auto res = solution->longestValidParentheses(str);
+  std::cout << res << std::endl;
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
