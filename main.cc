@@ -32,7 +32,12 @@
 // #include "29.divide/divide.h"
 // #include "30.findSubstring/findSubstring.h"
 // #include "31.nextPermutation/nextPermutation.h"
-#include "32.longestValidParentheses/longestValidParentheses.h"
+// #include "32.longestValidParentheses/longestValidParentheses.h"
+// #include "33.search/search.h"
+// #include "34.searchRange/searchRange.h"
+// #include "35.searchInsert/searchInsert.h"
+// #include "36.isValidSudoku/isValidSudoku.h"
+#include "37.solveSudoku/solveSudoku.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -109,7 +114,7 @@ int main(int argc, char* argv[]) {
   // std::vector<int> height{1,8,6,2,5,4,8,3,7};
   // int res = solution->maxArea(height);
   // std::cout << res << std::endl;
-  
+
   // 12.intToRoman
   // int num = 1234;
   // std::string res = solution->intToRoman(num);
@@ -135,7 +140,7 @@ int main(int argc, char* argv[]) {
   //   }
   //   std::cout << std::endl;
   // }
-  
+
   // 16.threeSumClosest
   // std::vector<int> nums{-1,2,1,-4};
   // int target = 1;
@@ -270,7 +275,7 @@ int main(int argc, char* argv[]) {
   // std::vector<std::string> words{"bar","foo","the"};
   // auto res = solution->findSubstring(s, words);
   // for(auto value : res){
-  //   std::cout << value << " "; 
+  //   std::cout << value << " ";
   // }
 
   // 31.nextPermutation
@@ -281,9 +286,60 @@ int main(int argc, char* argv[]) {
   // }
 
   // 32.longestValidParentheses
-  std::string str = "()()()()()(())";
-  auto res = solution->longestValidParentheses(str);
-  std::cout << res << std::endl;
+  // std::string str = "()()()()()(())";
+  // auto res = solution->longestValidParentheses(str);
+  // std::cout << res << std::endl;
+
+  // 33.search
+  // std::vector<int> nums{4,5,6,0,1,2,3};
+  // int target = 1;
+  // auto res = solution->search(nums, target);
+  // std::cout << res << std::endl;
+
+  // 34.searchRange
+  // std::vector<int> nums{1};
+  // int target = 0;
+  // auto res = solution->searchRange(nums, target);
+  // std::cout << res[0] << "," << res[1] << std::endl;
+
+  // 35.searchInsert
+  // std::vector<int> nums{1,2,3,5,6,7};
+  // int target = 4;
+  // auto res = solution->searchInsert(nums, target);
+  // std::cout << res << std::endl;
+
+  // 36.isValidSudoku
+  // std::vector<std::vector<char> > board{
+  //     {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+  //     {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+  //     {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+  //     {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+  //     {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+  //     {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+  //     {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+  //     {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+  //     {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+  // bool res = solution->isValidSudoku(board);
+  // std::cout << res << std::endl;
+
+  // 37.solveSudoku
+  std::vector<std::vector<char> > board{
+      {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+      {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+      {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+      {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+      {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+      {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+      {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+      {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+      {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+  solution->solveSudoku(board);
+  for(int i = 0; i < board.size(); i ++){
+    for(int j = 0; j < board[i].size(); j ++){
+      std::cout << board[i][j] << " ";
+    }
+    std::cout << std::endl;
+  }
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
