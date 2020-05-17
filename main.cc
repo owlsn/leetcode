@@ -38,7 +38,8 @@
 // #include "35.searchInsert/searchInsert.h"
 // #include "36.isValidSudoku/isValidSudoku.h"
 // #include "37.solveSudoku/solveSudoku.h"
-#include "39.combinationSum/combinationSum.h"
+// #include "39.combinationSum/combinationSum.h"
+#include "40.combinationSum2/combinationSum2.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -343,9 +344,20 @@ int main(int argc, char* argv[]) {
   // }
 
   // 39.combinationSum
-  std::vector<int> candidates{2,3,6,7};
-  int target = 7;
-  auto res = solution->combinationSum(candidates, target);
+  // std::vector<int> candidates{2,3,6,7};
+  // int target = 7;
+  // auto res = solution->combinationSum(candidates, target);
+  // for(auto& vec : res){
+  //   for(int v : vec){
+  //     std::cout << v << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 40.combinationSum2
+  std::vector<int> candidates{10,1,2,7,6,1,5};
+  int target = 8;
+  auto res = solution->combinationSum2(candidates, target);
   for(auto& vec : res){
     for(int v : vec){
       std::cout << v << " ";
