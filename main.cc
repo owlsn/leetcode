@@ -39,7 +39,8 @@
 // #include "36.isValidSudoku/isValidSudoku.h"
 // #include "37.solveSudoku/solveSudoku.h"
 // #include "39.combinationSum/combinationSum.h"
-#include "40.combinationSum2/combinationSum2.h"
+// #include "40.combinationSum2/combinationSum2.h"
+#include "41.firstMissingPositive/firstMissingPositive.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -355,15 +356,20 @@ int main(int argc, char* argv[]) {
   // }
 
   // 40.combinationSum2
-  std::vector<int> candidates{10,1,2,7,6,1,5};
-  int target = 8;
-  auto res = solution->combinationSum2(candidates, target);
-  for(auto& vec : res){
-    for(int v : vec){
-      std::cout << v << " ";
-    }
-    std::cout << std::endl;
-  }
+  // std::vector<int> candidates{10,1,2,7,6,1,5};
+  // int target = 8;
+  // auto res = solution->combinationSum2(candidates, target);
+  // for(auto& vec : res){
+  //   for(int v : vec){
+  //     std::cout << v << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 41.firstMissingPositive
+  std::vector<int> nums{2,1};
+  auto res = solution->firstMissingPositive(nums);
+  std::cout << res << std::endl;
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
