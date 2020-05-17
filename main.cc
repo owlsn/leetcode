@@ -37,7 +37,8 @@
 // #include "34.searchRange/searchRange.h"
 // #include "35.searchInsert/searchInsert.h"
 // #include "36.isValidSudoku/isValidSudoku.h"
-#include "37.solveSudoku/solveSudoku.h"
+// #include "37.solveSudoku/solveSudoku.h"
+#include "39.combinationSum/combinationSum.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -323,20 +324,31 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 37.solveSudoku
-  std::vector<std::vector<char> > board{
-      {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
-      {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-      {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-      {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-      {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-      {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-      {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-      {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-      {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
-  solution->solveSudoku(board);
-  for(int i = 0; i < board.size(); i ++){
-    for(int j = 0; j < board[i].size(); j ++){
-      std::cout << board[i][j] << " ";
+  // std::vector<std::vector<char> > board{
+  //     {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+  //     {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+  //     {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+  //     {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+  //     {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+  //     {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+  //     {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+  //     {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+  //     {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+  // solution->solveSudoku(board);
+  // for(int i = 0; i < board.size(); i ++){
+  //   for(int j = 0; j < board[i].size(); j ++){
+  //     std::cout << board[i][j] << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 39.combinationSum
+  std::vector<int> candidates{2,3,6,7};
+  int target = 7;
+  auto res = solution->combinationSum(candidates, target);
+  for(auto& vec : res){
+    for(int v : vec){
+      std::cout << v << " ";
     }
     std::cout << std::endl;
   }
