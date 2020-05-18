@@ -40,7 +40,9 @@
 // #include "37.solveSudoku/solveSudoku.h"
 // #include "39.combinationSum/combinationSum.h"
 // #include "40.combinationSum2/combinationSum2.h"
-#include "41.firstMissingPositive/firstMissingPositive.h"
+// #include "41.firstMissingPositive/firstMissingPositive.h"
+// #include "42.trap/trap.h"
+#include "43.multiply/multiply.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -367,8 +369,18 @@ int main(int argc, char* argv[]) {
   // }
 
   // 41.firstMissingPositive
-  std::vector<int> nums{2,1};
-  auto res = solution->firstMissingPositive(nums);
+  // std::vector<int> nums{2,1};
+  // auto res = solution->firstMissingPositive(nums);
+  // std::cout << res << std::endl;
+
+  // 42.trap
+  // std::vector<int> nums{0,1,0,2,1,0,1,3,2,1,2,1};
+  // auto res = solution->trap(nums);
+  // std::cout << res << std::endl;
+
+  // 43.multiply
+  std::string num1 = "123", num2 = "456";
+  std::string res = solution->multiply(num1, num2);
   std::cout << res << std::endl;
 
   // 206.reverseList
