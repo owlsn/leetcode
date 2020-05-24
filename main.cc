@@ -42,7 +42,8 @@
 // #include "40.combinationSum2/combinationSum2.h"
 // #include "41.firstMissingPositive/firstMissingPositive.h"
 // #include "42.trap/trap.h"
-#include "43.multiply/multiply.h"
+// #include "43.multiply/multiply.h"
+#include "44.isMatch/isMatch.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -379,8 +380,13 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 43.multiply
-  std::string num1 = "123", num2 = "456";
-  std::string res = solution->multiply(num1, num2);
+  // std::string num1 = "123", num2 = "456";
+  // std::string res = solution->multiply(num1, num2);
+  // std::cout << res << std::endl;
+
+  // 44.isMatch
+  std::string s = "adceb", p = "*a*b";
+  auto res = solution->isMatch(s, p);
   std::cout << res << std::endl;
 
   // 206.reverseList
