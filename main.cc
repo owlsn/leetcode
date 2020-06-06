@@ -44,7 +44,9 @@
 // #include "42.trap/trap.h"
 // #include "43.multiply/multiply.h"
 // #include "44.isMatch/isMatch.h"
-#include "45.jump/jump.h"
+// #include "45.jump/jump.h"
+// #include "46.permute/permute.h"
+#include "47.permuteUnique/permuteUnique.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -391,9 +393,29 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 45.jump
-  std::vector<int> nums{2,3,1,1,4};
-  auto res = solution->jump(nums);
-  std::cout << res << std::endl;
+  // std::vector<int> nums{2,3,1,1,4};
+  // auto res = solution->jump(nums);
+  // std::cout << res << std::endl;
+
+  // 46.permute
+  // std::vector<int> nums{1,2,3};
+  // auto res = solution->permute(nums);
+  // for(auto vec : res){
+  //   for(auto i : vec){
+  //     std::cout << i << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 47.permuteUnique
+  std::vector<int> nums{1,1,3};
+  auto res = solution->permuteUnique(nums);
+  for(auto vec : res){
+    for(auto i : vec){
+      std::cout << i << " ";
+    }
+    std::cout << std::endl;
+  }
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
