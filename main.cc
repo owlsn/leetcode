@@ -43,7 +43,8 @@
 // #include "41.firstMissingPositive/firstMissingPositive.h"
 // #include "42.trap/trap.h"
 // #include "43.multiply/multiply.h"
-#include "44.isMatch/isMatch.h"
+// #include "44.isMatch/isMatch.h"
+#include "45.jump/jump.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -385,8 +386,13 @@ int main(int argc, char* argv[]) {
   // std::cout << res << std::endl;
 
   // 44.isMatch
-  std::string s = "adceb", p = "*a*b";
-  auto res = solution->isMatch(s, p);
+  // std::string s = "adceb", p = "*a*b";
+  // auto res = solution->isMatch(s, p);
+  // std::cout << res << std::endl;
+
+  // 45.jump
+  std::vector<int> nums{2,3,1,1,4};
+  auto res = solution->jump(nums);
   std::cout << res << std::endl;
 
   // 206.reverseList
