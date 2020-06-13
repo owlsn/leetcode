@@ -46,7 +46,8 @@
 // #include "44.isMatch/isMatch.h"
 // #include "45.jump/jump.h"
 // #include "46.permute/permute.h"
-#include "47.permuteUnique/permuteUnique.h"
+// #include "47.permuteUnique/permuteUnique.h"
+#include "48.rotate/rotate.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -408,14 +409,29 @@ int main(int argc, char* argv[]) {
   // }
 
   // 47.permuteUnique
-  std::vector<int> nums{1,1,3};
-  auto res = solution->permuteUnique(nums);
-  for(auto vec : res){
-    for(auto i : vec){
-      std::cout << i << " ";
+  // std::vector<int> nums{1,1,3};
+  // auto res = solution->permuteUnique(nums);
+  // for(auto vec : res){
+  //   for(auto i : vec){
+  //     std::cout << i << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 48.rotate
+  std::vector<std::vector<int> > matrix{ 
+    {5, 1, 9,11},
+    { 2, 4, 8,10},
+    {13, 3, 6, 7},
+    {15,14,12,16}};
+  solution->rotate(matrix);
+  for(int i = 0; i < matrix.size(); i ++){
+    for(int j = 0; j < matrix[i].size(); j ++){
+      std::cout << matrix[i][j] << " ";
     }
     std::cout << std::endl;
   }
+  
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
