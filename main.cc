@@ -50,10 +50,11 @@
 // #include "48.rotate/rotate.h"
 // #include "49.groupAnagrams/groupAnagrams.h"
 // #include "88.merge/merge.h"
-#include "118.generate/generate.h"
+// #include "118.generate/generate.h"
 // #include "674.findLengthOfLCIS/findLengthOfLCIS.h"
 // #include "1051.heightChecker/heightChecker.h"
 // #include "1160.countCharacters/countCharacters.h"
+#include "1299.replaceElements/replaceElements.h"
 // #include "offer-53.2.missingNumber/missingNumber.h"
 
 // #include "206.reverseList/reverseList.h"
@@ -459,14 +460,14 @@ int main(int argc, char* argv[]) {
   // std::cout << std::endl;
 
   // 118.generate
-  int num = 5;
-  auto res = solution->generate(num);
-  for(auto nums : res){
-    for(auto num : nums){
-      std::cout << num << " ";
-    }
-    std::cout << std::endl;
-  }
+  // int num = 5;
+  // auto res = solution->generate(num);
+  // for(auto nums : res){
+  //   for(auto num : nums){
+  //     std::cout << num << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
@@ -493,6 +494,14 @@ int main(int argc, char* argv[]) {
   // std::string chars = "atach";
   // auto res = solution->countCharacters(words, chars);
   // std::cout << res << std::endl;
+
+  // 1299.replaceElements
+  std::vector<int> nums{17,18,5,4,6,1};
+  auto res = solution->replaceElements(nums);
+  for(int i = 0; i < res.size(); i ++){
+    std::cout << res[i] << " ";
+  }
+  std::cout << std::endl;
 
   // offer-53.2.missingNumber
   // std::vector<int> nums{0,1,2,3,4,5,6,7,9};
