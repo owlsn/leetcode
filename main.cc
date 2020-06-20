@@ -47,7 +47,14 @@
 // #include "45.jump/jump.h"
 // #include "46.permute/permute.h"
 // #include "47.permuteUnique/permuteUnique.h"
-#include "48.rotate/rotate.h"
+// #include "48.rotate/rotate.h"
+// #include "49.groupAnagrams/groupAnagrams.h"
+// #include "88.merge/merge.h"
+#include "118.generate/generate.h"
+// #include "674.findLengthOfLCIS/findLengthOfLCIS.h"
+// #include "1051.heightChecker/heightChecker.h"
+// #include "1160.countCharacters/countCharacters.h"
+// #include "offer-53.2.missingNumber/missingNumber.h"
 
 // #include "206.reverseList/reverseList.h"
 
@@ -419,19 +426,47 @@ int main(int argc, char* argv[]) {
   // }
 
   // 48.rotate
-  std::vector<std::vector<int> > matrix{ 
-    {5, 1, 9,11},
-    { 2, 4, 8,10},
-    {13, 3, 6, 7},
-    {15,14,12,16}};
-  solution->rotate(matrix);
-  for(int i = 0; i < matrix.size(); i ++){
-    for(int j = 0; j < matrix[i].size(); j ++){
-      std::cout << matrix[i][j] << " ";
+  // std::vector<std::vector<int> > matrix{ 
+  //   {5, 1, 9,11},
+  //   { 2, 4, 8,10},
+  //   {13, 3, 6, 7},
+  //   {15,14,12,16}};
+  // solution->rotate(matrix);
+  // for(int i = 0; i < matrix.size(); i ++){
+  //   for(int j = 0; j < matrix[i].size(); j ++){
+  //     std::cout << matrix[i][j] << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 49.groupAnagrams
+  // std::vector<std::string> strs{"eat", "tea", "tan", "ate", "nat", "bat"};
+  // auto res = solution->groupAnagrams(strs);
+  // for(auto str_arr : res){
+  //   for(auto str : str_arr){
+  //     std::cout << str << " ";
+  //   }
+  //   std::cout << std::endl;
+  // }
+
+  // 88.merge
+  // std::vector<int> nums1{0};
+  // std::vector<int> nums2{1};
+  // solution->merge(nums1, 0, nums2, 1);
+  // for(auto num : nums1){
+  //   std::cout << num << " ";
+  // }
+  // std::cout << std::endl;
+
+  // 118.generate
+  int num = 5;
+  auto res = solution->generate(num);
+  for(auto nums : res){
+    for(auto num : nums){
+      std::cout << num << " ";
     }
     std::cout << std::endl;
   }
-  
 
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
@@ -442,6 +477,27 @@ int main(int argc, char* argv[]) {
   //   std::cout << res->val << " ";
   //   res = res->next;
   // }
+
+  // 674.findLengthOfLCIS
+  // std::vector<int> nums{2};
+  // auto res = solution->findLengthOfLCIS(nums);
+  // std::cout << res << std::endl;
+  
+  // 1051.heightChecker
+  // std::vector<int> height{5,1,2,3,4};
+  // auto res = solution->heightChecker(height);
+  // std::cout << res << std::endl;
+
+  // 1160.countCharacters
+  // std::vector<std::string> words{"cat","bt","hat","tree"};
+  // std::string chars = "atach";
+  // auto res = solution->countCharacters(words, chars);
+  // std::cout << res << std::endl;
+
+  // offer-53.2.missingNumber
+  // std::vector<int> nums{0,1,2,3,4,5,6,7,9};
+  // auto res = solution->missingNumber(nums);
+  // std::cout << res << std::endl;
 
   return 0;
 }
