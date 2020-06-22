@@ -51,10 +51,14 @@
 // #include "49.groupAnagrams/groupAnagrams.h"
 // #include "88.merge/merge.h"
 // #include "118.generate/generate.h"
+// #include "167.twoSum/twoSum.h"
 // #include "674.findLengthOfLCIS/findLengthOfLCIS.h"
 // #include "1051.heightChecker/heightChecker.h"
+// #include "1010.numPairsDivisibleBy60/numPairsDivisibleBy60.h"
 // #include "1160.countCharacters/countCharacters.h"
-#include "1299.replaceElements/replaceElements.h"
+// #include "1266.minTimeToVisitAllPoints/minTimeToVisitAllPoints.h"
+// #include "1299.replaceElements/replaceElements.h"
+#include "1352.countNegatives/countNegatives.h"
 // #include "offer-53.2.missingNumber/missingNumber.h"
 
 // #include "206.reverseList/reverseList.h"
@@ -469,6 +473,14 @@ int main(int argc, char* argv[]) {
   //   std::cout << std::endl;
   // }
 
+  // 167.twoSum
+  // std::vector<int> numbers = {2, 7, 11, 15};
+  // int target = 9;
+  // auto res = solution->twoSum(numbers, target);
+  // for (auto i : res){
+  //   std::cout << i << " ";
+  // }
+
   // 206.reverseList
   // ListNode* l1 = new ListNode(2);
   // l1->next = new ListNode(3);
@@ -483,6 +495,11 @@ int main(int argc, char* argv[]) {
   // std::vector<int> nums{2};
   // auto res = solution->findLengthOfLCIS(nums);
   // std::cout << res << std::endl;
+
+  // 1010.numPairsDivisibleBy60
+  // std::vector<int> nums{30,20,150,100,40};
+  // auto res = solution->numPairsDivisibleBy60(nums);
+  // std::cout << res << std::endl;
   
   // 1051.heightChecker
   // std::vector<int> height{5,1,2,3,4};
@@ -495,13 +512,23 @@ int main(int argc, char* argv[]) {
   // auto res = solution->countCharacters(words, chars);
   // std::cout << res << std::endl;
 
+  // 1266.minTimeToVisitAllPoints
+  // std::vector<std::vector<int> > points{{1,1},{3,4},{-1,0}};
+  // auto res = solution->minTimeToVisitAllPoints(points);
+  // std::cout << res << std::endl;
+
   // 1299.replaceElements
-  std::vector<int> nums{17,18,5,4,6,1};
-  auto res = solution->replaceElements(nums);
-  for(int i = 0; i < res.size(); i ++){
-    std::cout << res[i] << " ";
-  }
-  std::cout << std::endl;
+  // std::vector<int> nums{17,18,5,4,6,1};
+  // auto res = solution->replaceElements(nums);
+  // for(int i = 0; i < res.size(); i ++){
+  //   std::cout << res[i] << " ";
+  // }
+  // std::cout << std::endl;
+
+  // 1352.countNegatives
+  std::vector<std::vector<int> > grid{{4,3,2,-1},{3,2,1,-1},{1,1,-1,-2},{-1,-1,-2,-3}};
+  auto res = solution->countNegatives(grid);
+  std::cout << res << std::endl;
 
   // offer-53.2.missingNumber
   // std::vector<int> nums{0,1,2,3,4,5,6,7,9};
