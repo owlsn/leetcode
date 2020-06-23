@@ -60,24 +60,30 @@ class MinStack {
 public:
     /** initialize your data structure here. */
     MinStack() {
-        
+      minStack.push(INT_MAX);
     }
     
     void push(int x) {
-        
+      origin.push(x);
+      minStack.push(std::min(minStack.top(), x));
     }
     
     void pop() {
-        
+      origin.pop();
+      minStack.pop();
     }
     
     int top() {
-        
+      return origin.top();
     }
     
     int getMin() {
-        
+      return minStack.top();
     }
+
+private:
+  std::stack<int> origin;
+  std::stack<int> minStack;
 };
 
 /**
