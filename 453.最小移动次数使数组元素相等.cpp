@@ -37,7 +37,19 @@
 class Solution {
 public:
     int minMoves(vector<int>& nums) {
-
+      if(nums.size() < 2){
+        return 0;
+      }
+      std::sort(nums.begin(), nums.end());
+      int diff = 0, step = 0;
+      for(int i = 1; i < nums.size(); i ++){
+        diff = nums[i] - nums[i - 1];
+        step += diff;
+        if(i < nums.size() - 1){
+          nums[i + 1] += step;
+        }
+      }
+      return step;
     }
 };
 // @lc code=end
